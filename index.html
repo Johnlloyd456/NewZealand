@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Zealand</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+    }
+
+    header {
+      background: url('Home.jpg') no-repeat center center/cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 80px;
+      background: linear-gradient(to bottom, transparent, #000);
+    }
+
+    header h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px #000;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      color: #ddd;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    h2 {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #00bcd4;
+      margin-bottom: 30px;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.9) !important;
+      backdrop-filter: blur(6px);
+    }
+
+    .nav-link {
+      color: #f0f0f0 !important;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #00bcd4 !important;
+    }
+
+    .flag-3d-wrapper {
+      perspective: 600px;
+      display: inline-block;
+    }
+
+    .flag-3d {
+      transform: rotateY(15deg) rotateX(5deg);
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
+      box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+    }
+
+    .flag-3d:hover {
+      transform: rotateY(0deg) rotateX(0deg) scale(1.1);
+      box-shadow: 0 6px 25px rgba(0, 188, 212, 0.6);
+    }
+
+    .card {
+      background-color: #111;
+      border: 1px solid #222;
+      color: #f0f0f0;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card img {
+      height: 250px;
+      object-fit: cover;
+      border-bottom: 2px solid #00bcd4;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 1rem 2rem rgba(0, 188, 212, 0.3);
+    }
+
+    .card-title {
+      color: #00bcd4;
+    }
+
+    .btn-info {
+      background-color: #00bcd4;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-info:hover {
+      background-color: #008c9e;
+    }
+
+    footer {
+      background-color: #000;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#home">
+        <div class="flag-3d-wrapper me-2">
+          <img 
+            src="Flag.jpg" 
+            alt="New Zealand Flag" 
+            width="45" 
+            height="28" 
+            class="rounded border border-light shadow-sm flag-3d"
+          >
+        </div>
+        New Zealand
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mountain">Mountain</a></li>
+          <li class="nav-item"><a class="nav-link" href="#museum">Museum</a></li>
+          <li class="nav-item"><a class="nav-link" href="#city">City</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <header id="home">
+    <div>
+      <h1>New Zealand</h1>
+      <p class="lead">Adventure, Beauty, and Culture in One Place</p>
+      <a href="#mountain" class="btn btn-info btn-lg mt-3">Explore More</a>
+    </div>
+  </header>
+
+  <section id="mountain">
+    <div class="container text-center">
+      <h2>Mountains</h2>
+      <p class="mb-5 text-light">Click on each mountain.</p>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card shadow">
+            <img src="Aoraki.jpg" class="card-img-top" alt="Aoraki / Mount Cook">
+            <div class="card-body">
+              <h5 class="card-title">Aoraki / Mount Cook</h5>
+              <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#mount1">CLICK</button>
+              <div class="collapse mt-3" id="mount1">
+                <p class="card-text">Aoraki/Mount Cook is New Zealand's highest mountain, located in the Southern Alps within Aoraki/Mount Cook National Park. The mountain holds significant cultural importance for the Māori people, who call it Aoraki, meaning "cloud piercer". It is a popular destination for mountaineering, hiking, and viewing glaciers, with a landscape defined by dramatic valleys, glaciers, and alpine peaks. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow">
+            <img src="Mount Tongariro.jpg" class="card-img-top" alt="Mount Tongariro">
+            <div class="card-body">
+              <h5 class="card-title">Mount Tongariro</h5>
+              <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#mount2">CLICK</button>
+              <div class="collapse mt-3" id="mount2">
+                <p class="card-text">Mount Tongariro is a complex, active volcano in New Zealand's North Island, located within the Tongariro National Park, New Zealand's first national park. It is known for its dramatic volcanic landscapes, including craters, emerald lakes, and lava flows, which have made it famous for features like the Tongariro Alpine Crossing and its use as a filming location for the Lord of the Rings trilogy. The area is also a dual UNESCO World Heritage site due to its outstanding natural features and significant cultural importance to the Māori people.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="museum" class="container text-center">
+    <h2>Museum</h2>
+    <p class="mt-3 text-light">Click about the New Zealand Museum.</p>
+    <div class="row mt-4 g-4">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <img src="Te papa.jpg" class="card-img-top" alt="Te Papa Museum">
+          <div class="card-body">
+            <h5 class="card-title">Te Papa Museum</h5>
+            <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#museum1">CLICK</button>
+            <div class="collapse mt-3" id="museum1">
+              <p class="card-text">Te Papa is New Zealand's national museum, located in Wellington, and is known for being interactive, innovative, and bicultural. The museum's name translates from Maori to "our container of treasured things" and it features collections on the country's natural environment, art, history, and unique Maori culture. It's a popular and accessible institution, with general admission being free for residents, and it houses extensive collections and offers dynamic exhibitions and events.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow">
+          <img src="war.jpg" class="card-img-top" alt="Auckland War Memorial Museum">
+          <div class="card-body">
+            <h5 class="card-title">Auckland War Memorial Museum</h5>
+            <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#museum2">CLICK</button>
+            <div class="collapse mt-3" id="museum2">
+              <p class="card-text">The Auckland War Memorial Museum is a neoclassical museum in Auckland, New Zealand, that serves as both a memorial to those who fought for New Zealand and a major cultural institution. Opened in 1929, it contains significant collections on Maori and Pacific artifacts, New Zealand's social and military history, and natural history. It is a popular tourist attraction, though it is currently undergoing redevelopment, which may affect certain galleries. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="city">
+    <div class="container text-center">
+      <h2>City Highlights</h2>
+      <p class="mb-5 text-light">City in New Zealand.</p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img src="Auckland.jpg" class="card-img-top" alt="Auckland">
+            <div class="card-body">
+              <h5 class="card-title">Auckland</h5>
+              <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#city1">CLICK</button>
+              <div class="collapse mt-3" id="city1">
+                <p class="card-text">Auckland is New Zealand's largest city, located on the North Island, and is a major center for business and commerce. Known as the "City of Sails," it's famous for its harbors, islands, and sailing culture, being situated between two harbors: the Waitemata Harbour and the Manukau Harbour. The city is multicultural, with a diverse population and significant Polynesian and Asian communities, and offers a mix of urban and natural attractions like beaches, volcanic cones, and islands.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img src="Wellington.jpg" class="card-img-top" alt="Wellington">
+            <div class="card-body">
+              <h5 class="card-title">Wellington</h5>
+              <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#city2">CLICK</button>
+              <div class="collapse mt-3" id="city2">
+                <p class="card-text">Wellington is New Zealand's capital city, located on the southern tip of the North Island where the city is nestled between a harbor and green hills. It is known as the country's cultural and political center, famous for its vibrant arts scene, many museums like Te Papa, and a lively, energetic atmosphere often associated with its famously windy weather. The city's compact layout allows for walkability and a blend of natural and urban attractions, including nearby Zealandia and a bustling waterfront.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img src="Queenstown.jpg" class="card-img-top" alt="Queenstown">
+            <div class="card-body">
+              <h5 class="card-title">Queenstown</h5>
+              <button class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#city3">CLICK</button>
+              <div class="collapse mt-3" id="city3">
+                <p class="card-text">Queenstown is known as the "Adventure Capital of the World." It's famous for extreme sports like bungee jumping, skiing, hiking, and scenic flights. The town offers breathtaking scenery and outdoor adventures all year round, making it one of the top travel destinations in New Zealand.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-white p-3 mt-5">
+    <p>© 2025 New Zealand</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
